@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.title {
+    width: 100%;
+}
+
+.title h1 {
+    text-align: center;
+    display: block;
+    margin: 45px auto 15px;
+}
+
+.title p {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+.flip-card {
+    width: 300px;
+    height: 450px;
+    margin: auto;
+}
+.flip-card-inner {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform .6s;
+}
+.card-front {
+    width: 300px;
+    height: 500px;
+    background: cornflowerblue;
+}
+
+.card-back {
+    width: 300px;
+    height: 500px;
+    background: crimson;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.card-back, .card-front {
+    position:  absolute;
+    backface-visibility: hidden
+}
+
+
+
+
+
+
